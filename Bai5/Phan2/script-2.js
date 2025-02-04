@@ -99,11 +99,11 @@
 // - 1 kí tự ở 11 sẽ lấy được kí tự cuối cùng 
 
 //split() chuyển một chuỗi thành một mảng array
-var myString = `HTML5, CSS3, Javascript`;
+// var myString = `HTML5, CSS3, Javascript`;
 // console.log(myString.split()); // Cả string là 1 phần tử
 // console.log(myString.split("")); // Mỗi ký tự là 1 phần tử
 // console.log(myString.split(", ")); // Mỗi từ là 1 phần tử
-console.log(myString.split(", ", 2)); // Mỗi từ là 1 phần tử, lấy tối đa 2 phần tử
+// console.log(myString.split(", ", 2)); // Mỗi từ là 1 phần tử, lấy tối đa 2 phần tử
 
 //mất khoảng trắng và lấy ra phần tử
 // var myString = `HTML5,      CSS3,       Javascript`;
@@ -111,6 +111,125 @@ console.log(myString.split(", ", 2)); // Mỗi từ là 1 phần tử, lấy t�
 // console.log(myString)
 // console.log(myString.split(", ")); // Mỗi từ là 1 phần tử
 
-//1h14p32s
+// //isNaN()
+// var a = 10;
+// var b = "Test";
+// var result = a / b;
+// console.log(result); // Trả về NaN
+// console.log(typeof result); //kieu du lieu cua result
+// if(typeof result == "number") {
+//     console.log("Day la so "+result);
+// }
+//  console.log(isNaN(result)); // Trả về true
+// if (isNaN(result)) {
+//     console.log("So nay bi loi!");
+// }
+// else {
+//     console.log("Day la so "+result)
+// }
+
+//toString()
+// var a = 10;
+// var b = a.toString();
+// var c = (10).toString();
+// console.log(a); // Trả về số 10
+// console.log(typeof a); // Trả về kiểu number
+// console.log(b); // Trả về chuỗi 10
+// console.log(typeof b); // Trả về kiểu string
+// console.log(c); // Trả về chuỗi 10
+// console.log(typeof c); // Trả về kiểu string
+
+//toFixed()
+// var a = 12.3456;
+// console.log(a.toFixed()); // Trả về 12
+// console.log(a.toFixed(0)); // Trả về 12
+// console.log(a.toFixed(1)); // Trả về 12.3
+// console.log(a.toFixed(2)); // Trả về 12.35
+// console.log(a.toFixed(3)); // Trả về 12.346
+
+//Lam viec voi Array
+
+//toString()
+// var list = ["HTML5", "CSS3", "Javascript"];
+// console.log(list.toString());
+// // Trả về: "HTML5,CSS3,Javascript"
+
+//join
+// var list = ["HTML5", "CSS3", "Javascript"];
+// console.log(list.join()); // Trả về: "HTML5,CSS3,Javascript"
+// console.log(list.join(",")); // Trả về: "HTML5,CSS3,Javascript"
+// console.log(list.join("")); // Trả về: "HTML5CSS3Javascript"
+// console.log(list.join(", ")); // Trả về: "HTML5, CSS3, Javascript"
+// console.log(list.join(" - ")); // Trả về: "HTML5 - CSS3 - Javascript"
+// console.log(list.join(" test ")) //tra ve : HTML5 test CSS3 test Javascript
+
+//pop()
+// var list = ["HTML5", "CSS3", "Javascript"];
+// console.log(list.pop()); // Trả về: "Javascript"
+// console.log(list); // Trả về: ["HTML5", "CSS3"]
+
+//push() dung de them 1 hoac nhieu phan tu vao cuoi mang array
+// var list = ["HTML5", "CSS3", "Javascript"];
+// console.log(list.length)//dau tien mang co 3 phan tu
+// console.log(list.push("Bootstrap 4", "ReactJS")); // Trả về: 5
+// console.log(list);
+// // Trả về: ["HTML5", "CSS3", "Javascript", "Bootstrap 4", "ReactJS"]
+
+//shift()
+// var list = ["HTML5", "CSS3", "Javascript"];
+// console.log(list)//danh sach luc dau
+// console.log(list.shift()); // Trả về: "HTML5"
+// console.log(list); // Trả về: ["CSS3", "Javascript"]
+
+//unShift() dung de them 1 hoac nhieu phan tu vao dau mang array
+// var list = ["HTML5", "CSS3", "Javascript"];
+// console.log(list.length)
+// console.log(list.unshift("Bootstrap 4", "ReactJS")); // Trả về: 5
+// console.log(list);
+// // Trả về: ["Bootstrap 4", "ReactJS", "HTML5", "CSS3", "Javascript"]
+
+//splice
+// Xóa hoặc chèn phần tử mới vào mảng.
+// ● Trả về mảng bị xóa.
+// ● Cú pháp: array.splice(index, howmany, item1, ....., itemX)
+// ● Trong đó:
+// ● index: Vị trí thêm/xóa phần tử (bắt buộc).
+// ● howmany: Số phần tử cần xóa (không bắt buộc).
+// ● item1, ..., itemX: Các phần tử mới được thêm vào (không bắt buộc).
+
+// ● Ví dụ 1: Chèn phần tử mới vào mảng
+// var list = ["HTML5", "CSS3", "Javascript"];
+// console.log(list.splice(2, 0, "Bootstrap 4", "ReactJS")); // Trả về: [] do khong co phan tu nao duoc xoa
+// console.log(list);
+// Trả về: ["HTML5", "CSS3", "Bootstrap 4", "ReactJS", "Javascript"]
+
+// Ví dụ 2: Xóa phần tử trong mảng
+// var list = ["HTML5", "CSS3", "Javascript"];
+// console.log(list.splice(1, 1)); // Trả về: ["CSS3"]
+// console.log(list); // Trả về: ["HTML5", "Javascript"]
+
+//Ví dụ 3: Xóa phần tử và chèn phần tử mới vào mảng
+// var list = ["HTML5", "CSS3", "Javascript"];
+// console.log(list.splice(2, 1, "Bootstrap 4", "ReactJS"));
+// // Trả về: ["Javascript"]
+// console.log(list);
+// // Trả về: ["HTML5", "CSS3", "Bootstrap 4", "ReactJS"]
+
+//concat()
+// var list = ["HTML5", "CSS3", "Javascript"];
+// var list2 = ["Bootstrap 4", "ReactJS"];
+// var list3=list.concat(list2)
+// console.log(list3)
+// // Trả về: ["HTML5", "CSS3", "Javascript", "Bootstrap 4", "ReactJS"]
+// console.log(list);
+// // Trả về: ["HTML5", "CSS3", "Javascript"]
+
+//slice
+// var list = ["HTML5", "CSS3", "Javascript", "Bootstrap 4", "ReactJS"];
+// console.log(list.slice(3)); // Trả về: ["Bootstrap 4", "ReactJS"]
+// console.log(list.slice(1, 3)); // Trả về: ["CSS3", "Javascript"]
+// console.log(list.slice(-3, -1)); // Trả về: ["Javascript", "Bootstrap 4"]
+// console.log(list);
+// // Trả về: ["HTML5", "CSS3", "Javascript", "Bootstrap 4", "ReactJS"]
 
 
